@@ -1,4 +1,5 @@
 import { CssBaseline, ThemeProvider } from '@mui/material';
+
 import { ColorModeContext, useMode } from './hooks/useMode';
 import { Topbar } from './scenes/global/Topbar';
 
