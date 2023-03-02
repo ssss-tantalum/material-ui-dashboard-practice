@@ -1,22 +1,19 @@
 import React from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { ProSidebarProvider } from 'react-pro-sidebar';
+import { BrowserRouter } from 'react-router-dom';
 
 import ReactDOM from 'react-dom/client';
 
 import App from './App';
-import ErrorPage from './error-page';
-import './index.css';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    errorElement: <ErrorPage />
-  }
-]);
+import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <BrowserRouter>
+      <ProSidebarProvider>
+        <App />
+      </ProSidebarProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
